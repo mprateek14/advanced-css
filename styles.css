@@ -11,6 +11,59 @@ footer {
     display: block;
 }
 
+.container {
+    width: 100%;
+    height: auto;
+    padding-bottom: 4%;
+    padding-top: 4%;
+}
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width: 66.66%;}
+.col-9{width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+h1.large{
+    color: #fff;
+    font-size: 48px;
+    margin: 0;
+    line-height: 50px;
+    text-shadow: 2px 2px black;
+}
+
+input[type="text"]{
+    font-size: 14px;
+    width: 400px;
+    min-width: 100px;
+    padding: 5px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 2px 1px black;
+}
+form h2{
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
 /* ################## NAVBAR ##################### */
 
 nav {
@@ -52,9 +105,29 @@ ul.topnav li.dropDownIcon {
     display: none;
 }
 
+/*################ Custom ###################*/
+
+#sec-1-gradient {
+    background: rgb(70, 132, 196);
+    background: linear-gradient(
+        90deg,
+        rgba(70, 132, 196, 1) 0%,
+        rgba(16, 97, 130, 1) 50%,
+        rgba(8, 107, 140, 1) 58%,
+        rgba(13, 153, 181, 1) 100%
+    );
+}
+
+.leftSide{
+    margin-left: 30%;
+}
+
+.rightSide{
+    margin-left: 15%;
+}
 /*################## MOBILE  #####################*/
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 680px) {
     ul.topnav li:not(:nth-child(1)) {
         display: none;
     }
@@ -79,5 +152,27 @@ ul.topnav li.dropDownIcon {
     ul.topnav.respnsive li a {
         display: block;
         text-align: left;
+    }
+    
+    /*############### CONTAINER ################*/
+    
+    .col-6{
+        width: 100%;
+        margin: 0;
+    }
+    
+    .leftSide,.rightSide{
+        margin: 15px;
+    }
+    
+    input[type="text"]{
+        width: 350px;
+    }
+    
+    .video iframe{
+        width: 100%;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
     }
 }
